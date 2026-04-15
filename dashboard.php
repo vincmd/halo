@@ -6,7 +6,6 @@ if (!isset($_SESSION["id"])) {
     exit();
 }
 
-$role = $_SESSION["role"];
 $username = $_SESSION["username"];
 
 $total_barang = $koneksi->query("SELECT COUNT(id) AS total FROM barang")->fetch_assoc()['total'];
@@ -27,9 +26,8 @@ $pendapatan = $koneksi->query("SELECT SUM(total_harga) AS total FROM penjualan")
         <a href="dashboard.php">kasir</a>   
             <a href="pendataan_barang.php">Pendataan barang</a>
             <a href="penjualan_barang.php">Penjualan barang</a>
-            <?php if($role === 'admin'): ?>
                 <a href="register.php">register</a>
-            <?php endif; ?>
+
             <a href="logout.php">logout</a>
             </div>
     </div>

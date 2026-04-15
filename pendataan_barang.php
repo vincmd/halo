@@ -5,7 +5,7 @@ if (!isset($_SESSION["id"])) {
     header("Location: index.php");
     exit();
 }
-$role = $_SESSION["role"];
+
 $error = "";
 $success = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -86,9 +86,7 @@ if (isset($_GET['success'])) {
         <a href="dashboard.php">kasir</a>   
             <a href="pendataan_barang.php">Pendataan barang</a>
             <a href="penjualan_barang.php">Penjualan barang</a>
-            <?php if($role === 'admin'): ?>
                 <a href="register.php">register</a>
-            <?php endif; ?>
             <a href="logout.php">logout</a>
             </div>
     </div>

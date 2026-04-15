@@ -7,7 +7,6 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-$role = $_SESSION['role'];
 
 // Inisialisasi keranjang
 if (!isset($_SESSION['cart'])) {
@@ -111,9 +110,7 @@ $barang_list = $koneksi->query("SELECT id, nama_barang, harga, stok FROM barang 
         <a href="dashboard.php">kasir</a>   
             <a href="pendataan_barang.php">Pendataan barang</a>
             <a href="penjualan_barang.php">Penjualan barang</a>
-            <?php if($role === 'admin'): ?>
                 <a href="register.php">register</a>
-            <?php endif; ?>
             <a href="logout.php">logout</a>
     <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
         <h2>Transaksi Penjualan</h2>

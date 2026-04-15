@@ -26,6 +26,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Document</title>
 </head>
 <body>
+    <div class="container" style=" width:300px;
+    height: 130px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 0px;
+    text-align: center;
+    background-color: rgb(194, 242, 255);">
     <form action="" method="POST">
         <label for="username">Masukkan username anda</label><br>
         <input type="text" id="username" name="username" placeholder="Username" required><br>
@@ -38,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </select>
     <button type="submit">Register</button><br>
      <a href="dashboard.php">kembali</a>
+     </div>
 </body>
 
 </html>
